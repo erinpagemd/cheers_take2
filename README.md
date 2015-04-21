@@ -24,12 +24,11 @@ The user types in name, for example:
 
 The program puts out a cheer in the following format:
 
-Give me an... A
-Give me a... B
-Give me a... B
-Give me a... Y
-ABBY’s just GRAND!
-When given the input of “Abby”.
+>Give me an... A
+>Give me a... B
+>Give me a... B
+>Give me a... Y
+>ABBY’s just GRAND!
 
 * Follow the proper grammatical rules for a and an. The rules is based on whether the spelling of the letter would begin with a vowel sound.
 * Ignore all special characters (i.e. non-word characters) when printing the cheer (e.g. "Give me a....")
