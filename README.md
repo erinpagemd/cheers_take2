@@ -54,4 +54,4 @@ The user types in their birthdate
 
 The program then outputs the number of days until the user's birthday in the following format:
 
-Awesome!  Your birthday is in 45 days! Happy Birthday in advance!
+>Awesome!  Your birthday is in 45 days! Happy Birthday in advance!
