@@ -12,13 +12,13 @@ A small program that takes input and does something with it.
 
 ### Help Usage
 
-Run the program by running ./cheers.rb
+Run the program by running ./cheers
 
 The program will print out:
 
 > I'd cheer for you, if only I knew who you were :(
 
-> Try again with ./cheers.rb [Name] [MM/DD Birthday]
+> Try again with ./cheers [Name] [MM/DD Birthday]
 
 
 ### Regular Usage
@@ -49,7 +49,7 @@ If there is no input, the program would instead print out:
 
 > I'd cheer for you, if only I knew who you were :-(
 
-> Try again with './cheers.rb [Name] [MM/DD Birthday]'
+> Try again with './cheers [Name] [MM/DD Birthday]'
 
 After printing out the user's cheer, the program then outputs the number of days until the user's birthday in the following format:
 
@@ -67,7 +67,7 @@ If the input for birthday wasn't parseable, the program would instead say:
 
 Start the program by running
 
-> ./cheers.rb
+> ./cheers
 
 The program should prompt for a name.
 
