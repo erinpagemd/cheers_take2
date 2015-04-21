@@ -25,7 +25,7 @@ The program will print out:
 
 Start the program by running
 
->./cheers.rb Erin 05/29
+>./cheers.rb Abby 08/25
 
 The first argument is the user's name. The second argument is the user's birthday.
 
