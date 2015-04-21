@@ -14,13 +14,13 @@ A small program that takes input and does something with it.
 
 Start the program by running
 
-```>./cheers.rb```
+>./cheers.rb
 
 The program should prompt for name.
 
 The user types in name, for example:
 
-```>Abby```
+>Abby
 
 The program puts out a cheer in the following format:
 
@@ -38,16 +38,16 @@ When given the input of “Abby”.
 
 After printing out the user's cheer, the program asks:
 
-```>Hey, Abby, what's your birthday? (mm/dd)```
+>Hey, Abby, what's your birthday? (mm/dd)
 
 The user types in their birthdate
 
-```>08/25```
+>08/25
 
 * If there was no input, asks again until valid input is provided
 * If there was input that couldn't be parsed, the program tries again, but with the prompt:
 
-```>I couldn't understand that. Could you give that to me in mm/dd format?```
+>I couldn't understand that. Could you give that to me in mm/dd format?
 
 The program then outputs the number of days until the user's birthday in the following format:
 
