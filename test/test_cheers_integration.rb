@@ -141,4 +141,13 @@ EOS
     assert_equal expected, output
   end
 
+  def test_three_arguments
+    output = `./cheers Abby 08/25 Other`
+    expected = <<EOS
+I'd cheer for you, if only I knew who you were :(
+Try again with ./cheers.rb [Name] [MM/DD Birthday]
+EOS
+    assert_equal expected, output
+  end
+
 end

@@ -8,20 +8,16 @@ end
 
 def cheer_message
   name = ARGV[0]
-  name_sub = name.gsub(/[\W\d]/, "")
-  if name_sub.empty?
-    help_message
-  else
-    an_letters = "AEIOFLMNSRX"
-    name_sub.each_char do |c|
-      if an_letters.include?(c.upcase)
-        puts "Give me an.. #{c.upcase}"
-      else
-        puts "Give me a.. #{c.upcase}"
-      end
+  name_gsub = name.gsub(/[\W\d]/, "")
+  an_letters = "AEIOFLMNSRX"
+  name_gsub.each_char do |c|
+    if an_letters.include?(c.upcase)
+      puts "Give me an.. #{c.upcase}"
+    else
+      puts "Give me a.. #{c.upcase}"
     end
-    puts "#{name}'s just GRAND!"
   end
+  puts "#{name}'s just GRAND!"
 end
 
 def birthday_message
@@ -38,10 +34,22 @@ def valid_date
   true if maybe_date.size < 7 && maybe_month <= 12 && maybe_month != 0
 end
 
-if ARGV.empty?
-  help_message
-elsif ARGV.length == 1
-  cheer_message
+def valid_name
+  maybe_name = ARGV[0]
+  maybe_name_gsub = maybe_name.gsub(/[\W\d]/, "")
+  if maybe_name_gsub.empty? || maybe_name.empty? || maybe_name.nil?
+    false
+  else
+    true
+  end
+end
+
+if ARGV.length == 1
+  if valid_name
+    cheer_message
+  else
+    help_message
+  end
 elsif ARGV.length == 2
   if valid_date
     cheer_message
@@ -50,5 +58,5 @@ elsif ARGV.length == 2
     help_message
   end
 else
-  puts "x"
+  help_message
 end
