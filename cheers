@@ -44,19 +44,12 @@ def valid_name
   end
 end
 
-if ARGV.length == 1
-  if valid_name
-    cheer_message
-  else
-    help_message
-  end
-elsif ARGV.length == 2
-  if valid_date
-    cheer_message
-    birthday_message
-  else
-    help_message
-  end
+
+
+if ARGV.length == 1 && valid_name
+  cheer_message
+elsif ARGV.length == 2 && valid_name && valid_date
+  cheer_message
 else
   help_message
 end
