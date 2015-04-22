@@ -1,3 +1,58 @@
 #!/usr/bin/env ruby
 
-puts "I'd cheer for you, if only I knew who you were :(\nTry again with ./cheers.rb [Name] [MM/DD Birthday]"
+require 'date'
+
+def help_message
+  puts "I'd cheer for you, if only I knew who you were :(\nTry again with ./cheers.rb [Name] [MM/DD Birthday]"
+end
+
+def cheer_message
+  name = ARGV[0]
+  name_sub = name.gsub(/[\W\d]/, "")
+  if name_sub.empty?
+    help_message
+  else
+    an_letters = "AEIOFLMNSRX"
+    name_sub.each_char do |c|
+      if an_letters.include?(c.upcase)
+        puts "Give me an.. #{c.upcase}"
+      else
+        puts "Give me a.. #{c.upcase}"
+      end
+    end
+    puts "#{name}'s just GRAND!"
+  end
+end
+
+def birthday_message
+  birthday = Date.parse(ARGV[1])
+  today = Date.today
+  diff = birthday - today
+  days_until = diff.to_i % 365
+  puts "Awesome! Your birthday is in #{days_until} days! Happy Birthday in advance!"
+end
+
+def valid_date
+  maybe_date = ARGV[1]
+  maybe_month = maybe_date[0..1].gsub(/[\w]/, "").to_i
+  if maybe_date.size < 7 or maybe_month > 12
+    true
+  else
+    false
+  end
+end
+
+if ARGV.empty?
+  help_message
+elsif ARGV.length == 1
+  cheer_message
+elsif ARGV.length == 2
+  if valid_date
+    cheer_message
+    birthday_message
+  else
+    help_message
+  end
+else
+  puts "x"
+end

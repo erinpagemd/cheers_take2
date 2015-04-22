@@ -2,12 +2,6 @@
 
 ## Instructions
 
-How do we start a new program?
-
-Let’s try it by building:
-
-A small program that takes input and does something with it.
-
 ## Specifications, for non-interactive version of cheers
 
 ### Help Usage
@@ -25,7 +19,7 @@ The program will print out:
 
 Start the program by running
 
->./cheers.rb Abby 08/25
+>./cheers Abby 08/25
 
 The first argument is the user's name. The second argument is the user's birthday.
 
