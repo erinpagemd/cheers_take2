@@ -44,8 +44,6 @@ def valid_name
   end
 end
 
-
-
 if ARGV.length == 1 && valid_name
   cheer_message
 elsif ARGV.length == 2 && valid_name && valid_date
