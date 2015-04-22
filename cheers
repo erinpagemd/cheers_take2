@@ -34,8 +34,8 @@ end
 
 def valid_date
   maybe_date = ARGV[1]
-  maybe_month = maybe_date[0..1].gsub(/[\w]/, "").to_i
-  if maybe_date.size < 7 or maybe_month > 12
+  maybe_month = maybe_date[0..1].gsub(/[\D]/, "").to_i
+  if maybe_date.size < 7 || maybe_month > 12
     true
   else
     false
